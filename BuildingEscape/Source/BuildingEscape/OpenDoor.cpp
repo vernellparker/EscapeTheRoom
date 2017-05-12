@@ -21,11 +21,11 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 
 
-	auto * Owner = GetOwner();
-	
-	FRotator NewRotation = FRotator(0.0f, 90.0f, 0.0f);
+	auto* Owner = GetOwner(); //Gets the owner object
 
-	Owner->SetActorRotation(NewRotation);
+	FRotator NewRotation = FRotator(0.0f, 90.0f, 0.0f); //Creates a rotator
+
+	Owner->SetActorRotation(NewRotation);//Rotates the Owner
 	
 }
 
