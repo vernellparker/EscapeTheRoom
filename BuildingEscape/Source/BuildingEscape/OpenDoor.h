@@ -15,6 +15,7 @@ public:
 	// Sets default values for this component's properties
 	UOpenDoor();
 	void OpenDoor();
+	void CloseDoor();
 
 protected:
 	// Called when the game starts
@@ -25,14 +26,23 @@ public:
 	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
 
 private:
-	UPROPERTY(VisibleAnywhere)//Uproperty makes variables viewable in editor 
+	UPROPERTY(EditAnywhere)//UPROPERTY makes variables viewable in editor 
 	float OpenAngle = 90.0f;
 
-	UPROPERTY(EditAnywhere)//Uproperty makes variables viewable in editor , this is a trigger volume 
+	UPROPERTY(EditAnywhere)//UPROPERTYmakes variables viewable in editor , this is a trigger volume 
 	ATriggerVolume* PressurePlate;
 
+	UPROPERTY(EditAnywhere)
+	float DoorCloseDelay = 0.6f;
+
+	UPROPERTY(EditAnywhere)
+	float CloseAngle = 180.0f;
+
+	float LastDoorOpenTime;
 
 	AActor* ActorThatOpens; //Pawn inherits from actor
+
+	AActor* Owner;
 
 	
 	
