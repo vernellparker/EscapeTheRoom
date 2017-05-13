@@ -21,7 +21,7 @@ void UPositionReporter::BeginPlay()
 	Super::BeginPlay();
 
 	FString ObjectName = GetOwner()->GetName(); //Gets the name of a game object.
-	FString ObjectPostition = GetOwner()->GetTransform().GetLocation().ToString();//Gets the Postion of an Object
+	FString ObjectPostition = GetOwner()->GetTransform().GetLocation().ToString();//Gets the position of an Object
 	UE_LOG(LogTemp, Warning, TEXT(" %s is at %s"), *ObjectName, *ObjectPostition);//Outputs the FStrings to Log
 }
 

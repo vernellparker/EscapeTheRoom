@@ -31,7 +31,7 @@ private:
 	UPROPERTY(EditAnywhere)//Uproperty makes variables viewable in editor , this is a trigger volume 
 	ATriggerVolume* PressurePlate;
 
-	UPROPERTY(EditAnywhere)
+
 	AActor* ActorThatOpens; //Pawn inherits from actor
 
 	

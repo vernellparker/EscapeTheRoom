@@ -22,6 +22,7 @@ void UOpenDoor::BeginPlay()
 {
 	Super::BeginPlay();
 
+	ActorThatOpens= GetWorld()->GetFirstPlayerController()->GetPawn(); //Gets Pawn which is the character 
 
 
 	
