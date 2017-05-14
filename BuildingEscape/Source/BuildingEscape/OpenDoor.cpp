@@ -33,7 +33,7 @@ void UOpenDoor::BeginPlay()
 	Super::BeginPlay();
 
 	ActorThatOpens= GetWorld()->GetFirstPlayerController()->GetPawn(); //Gets Pawn which is the character 
-	Owner = GetOwner(); //Gets the owner object
+	Owner = GetOwner(); //Gets the owner object which is the door
 
 	
 }
@@ -52,7 +52,9 @@ void UOpenDoor::TickComponent(float DeltaTime, ELevelTick TickType, FActorCompon
 		LastDoorOpenTime = GetWorld()->GetTimeSeconds();
 	}
 
-	//Check if its time to close the door
+	/*Check if its time to close the door. Subtract last time door open from the from the current time and compare 
+	 *if it is greater than the Door Delay variable 
+	*/
 	if (GetWorld()->GetTimeSeconds() - LastDoorOpenTime > DoorCloseDelay)
 	{
 		CloseDoor();

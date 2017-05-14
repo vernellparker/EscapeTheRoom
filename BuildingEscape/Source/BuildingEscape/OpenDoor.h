@@ -38,11 +38,11 @@ private:
 	UPROPERTY(EditAnywhere)
 	float CloseAngle = 180.0f;
 
-	float LastDoorOpenTime;
+	float LastDoorOpenTime;// This is the last time the door opened
 
 	AActor* ActorThatOpens; //Pawn inherits from actor
 
-	AActor* Owner;
+	AActor* Owner;//Owner of this component which is the door
 
 	
 	
